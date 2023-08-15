@@ -6,4 +6,5 @@ All the projects are simple and easy to do.
 2.JavaScript stone paper scissor game using switch statement.  <br>
 3.Basic of Ternary operator. <br>
 4.JavaScript stone paper scissor game using tenary operator. <br>
+5.Getting input from user. <br>
 
