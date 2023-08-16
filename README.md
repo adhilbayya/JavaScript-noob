@@ -7,4 +7,5 @@ All the projects are simple and easy to do.
 3.Basic of Ternary operator. <br>
 4.JavaScript stone paper scissor game using tenary operator. <br>
 5.Getting input from user. <br>
+6.Stone paper scissor game using user input <br>
 
