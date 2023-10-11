@@ -11,6 +11,7 @@ Object.defineProperties(myDetails,{
     get:function(){
       return this.age + 3;
     }
-  })
+  }
+});
 
 console.log("Hello "+myDetails.name+" you will be "+myDetails.plusThree+" years old in the next 3 years");
