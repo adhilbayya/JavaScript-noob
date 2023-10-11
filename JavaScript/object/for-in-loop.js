@@ -4,5 +4,5 @@ const myName = {
   age : 20
 }
 for(var details in myName){
-  console.log(details" : "+myName[details]);
+  console.log(details+" : "+myName[details]);
 }
