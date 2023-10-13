@@ -7,7 +7,7 @@ let meeting = {
   },
   get latest(){
     let count = this.attendees.length;
-    return count == 0 ? undefined : attendees[count - 1];
+    return count == 0 ? undefined : this.attendees[count - 1];
   }
 };
 
