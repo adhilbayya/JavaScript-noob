@@ -17,3 +17,20 @@ class Person{
 let person = new Person('Adhil');
 person.name = 'Bayya';
 console.log(person.name) // Bayya
+
+
+//What will happen if we only use the getter not the setter
+
+class Person{
+  constructor(name){
+    this.name = name;
+  }
+  get name(){
+    return this.name;
+  }
+}
+
+let person = new Person("Adhil");
+person.name = "Bayya";
+console.log(person.name) //Adhil
+  
