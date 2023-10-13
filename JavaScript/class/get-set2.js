@@ -3,14 +3,14 @@ class Person{
     this.name = name;
   }
   get name(){
-    return this.name;
+    return this._name;
   }
   set name(newName){
     newName = newName.trim();
     if(newName == ''){
       throw 'Name is empty';
     }
-    this.name = newName;
+    this._name = newName;
   }
 }
 
