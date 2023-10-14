@@ -3,6 +3,7 @@
     this.name = name;
     this.quantity = quantity;
     this.constructor.count++; //Item.count++;
+    //Use the this.constructor.staticPropertyName or className.staticPropertyName to access the static property in a constructor.
   }
   static count = 0;
   static getCount(){
