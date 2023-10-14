@@ -1,6 +1,6 @@
 class Animal{
   constructor(legs){
-    this.leg = leg;
+    this.legs = legs;
   }
 }
 
