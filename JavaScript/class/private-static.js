@@ -21,7 +21,7 @@ class Person{
     return `${this.#lastname} ${this.#firstname}`;
   }
   getname(fullname = true){
-    return fullname ? this.#firstlast : this.#lastfirst;
+    return fullname ? this.#firstlast() : this.#lastfirst();
   }
 }
 
