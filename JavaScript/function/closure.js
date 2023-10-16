@@ -5,5 +5,5 @@ function greeting(message){
 }
 let sayHi = new greeting('Hi');
 let sayHello = new greeting('Hello');
-sayHi('Adhil');
-sayHello('bayya');
+console.log(sayHi('Adhil'));
+console.log(sayHello('bayya'));
