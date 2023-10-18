@@ -8,7 +8,7 @@ function isOdd(num){
 function evaluate(num, func){
   let res = [];
   for(const number of num){
-    if(fn(number)){
+    if(func(number)){
       res.push(number);
     }
   }
@@ -17,4 +17,6 @@ function evaluate(num, func){
 
 let numbers = [1,2,3,4,5,6,7,8,9]
 let evenResult = evaluate(numbers, isEven);
-console.log(evenResult);
+let oddResult = evaluate(numbers, isOdd);
+console.log(evenResult); //[ 2, 4, 6, 8 ]
+console.log(oddResult); //[ 1, 3, 5, 7, 9 ]
