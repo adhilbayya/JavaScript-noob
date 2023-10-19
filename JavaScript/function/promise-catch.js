@@ -17,3 +17,5 @@ function getUser(){
 getUser().catch((error) => {
   console.log(error) // failed to the user list
 });
+//Only shows when there is error
+//or esle  the output will not be shown
