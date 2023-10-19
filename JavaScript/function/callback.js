@@ -2,7 +2,7 @@ function getUser(callback){
   setTimeout(() => {
     callback([
       {name : 'Adhil', email : 'Adilkkii@123.com'},
-      {name : 'Faris', email : 'farsikki1221@123.com'};
+      {name : 'Faris', email : 'farsikki1221@123.com'}
   ]);
   }, 1000);
 }
