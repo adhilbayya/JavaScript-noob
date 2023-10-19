@@ -12,5 +12,5 @@ function getUser(){
 let user = getUser();
 user.then((users) => {
   console.log(users);
-}
+})
                      
