@@ -24,6 +24,7 @@ function generateNum(num){
       resolve(num);
     }, 1000)
   })
+}
 
   generateNum(10)
   .then((res) => {
