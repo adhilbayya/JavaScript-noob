@@ -1,7 +1,7 @@
 let p = new Promise((resolve, reject) => {
   setTimeout(() => {
-    resolve(10),
-    100 * 3)
+    resolve(10)
+  },100 * 3)
 })
 
 p.then((result) => {
