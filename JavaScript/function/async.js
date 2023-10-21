@@ -24,9 +24,9 @@ function geServicePrice(services){
   })
 
   async function getTotal(){
-    let user = getUser(100);
-    let service = getServices(user);
-    let total = getServicePrice(service);
+    let user = await getUser(100);
+    let service = await getServices(user);
+    let total =await getServicePrice(service);
     console.log(total);
   }
   getTotal();
