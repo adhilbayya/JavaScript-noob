@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript getElementsByClassName</title>
+</head>
+<body>
+    <ul class="menu">
+    </ul>
+    <script>
+        let menu = document.querySelector('.menu')
+        let values = ['About','Contact','delay'];
+
+      let final = values.map((value) => {
+        let li = document.createElement('li');
+        li.innerText = value;
+        return li;
+      })
+      menu.firstChild.before(...final);
+    </script>
+</body>
+</html>
