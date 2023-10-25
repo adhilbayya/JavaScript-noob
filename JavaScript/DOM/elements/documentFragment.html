@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript getElementsByClassName</title>
+</head>
+<body>
+    <ul class="menu">
+    </ul>
+    <script>
+        let menus = ['Home','About','Contact','Slides','Social']
+        let menuEl = document.querySelector('.menu')
+
+        let fragment = new documentFragment();
+        menus.forEach((menu) => {
+          let li = document.createElement('li');
+          li.innerHTML = menu;
+          fragment.appendChild(li);
+        })
+      menuEl.appendChild(fragment)
+    </script>
+</body>
+</html>
