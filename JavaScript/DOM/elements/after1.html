@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript DOM - after()</title>
+        
+    </head>
+
+    <body>
+        <h1>This is a heading</h1>
+        <script>
+           let h1 = document.querySelector('h1');
+           let p = document.createElement('h3');
+           p.textContent = 'This is a Paragraph'
+           h1.after(p)
+        </script>
+    </body>
+
+</html>
