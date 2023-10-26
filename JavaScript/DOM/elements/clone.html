@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insertAdjacentHTML() Demo</title>
+</head>
+<body>
+    <ul>
+        <li>Biriyani</li>
+        <li>Malabar</li>
+        <li>Ambur</li>
+        <li>Hydrabadi</li>
+        <li>Mysore</li>
+    </ul>
+
+    <script>
+      let menu = document.querySelector('ul')
+      let cloned = menu.cloneNode(true)
+      cloned.id = 'cloned-menu'
+      document.body.appendChild(cloned)
+    </script>
+</body>
+</html>
