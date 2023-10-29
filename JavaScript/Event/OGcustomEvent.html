@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">Custom event</div>
+    <script>
+        function highlight(elem){
+            let bgColor = 'yellow'
+            elem.style.backgroundColor = bgColor;
+
+            let event = new CustomEvent('highlight', {
+                details:{
+                    backgroundColor : bgColor
+                }
+            })
+            elem.dispatchEvent(event)
+        }
+        let div = document.querySelector('.main')
+        function addHighlight(e){
+            e.style.border = '1px solid red'
+        }
+        div.addEventListener('highlight', function(e){
+            addHighlight(this)
+
+            console.log(e.details)
+        })
+        highlight(div)
+    </script>
+</body>
+</html>
