@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Move your mouse pointer to know your cordinates</p>
+    <div class="box" style="background-color: rgb(48, 48, 1); width: 400px; height: 200px;"></div>
+    <p class="msg"></p>
+    <script>
+        let box = document.querySelector('.box')
+        box.addEventListener('mousemove', (e) =>{
+            let msg = document.querySelector('.msg')
+            msg.innerText = `
+                Screen X/Y = (${e.screenX} , ${e.screenY})
+                client X/Y = (${e.clientX} , ${e.clientY})
+            `;
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" value="Name">
+    <input type="password" value="Password">
+    <script>
+        let psw = document.querySelector('input[type = "password"]')
+        psw.addEventListener('focus',(e) => {
+            e.target.style.backgroundColor = 'yellow';
+        })
+
+        psw.addEventListener('blur', (e) => {
+            e.target.style.backgroundColor = ''
+        })
+    </script>
+</body>
+</html>
