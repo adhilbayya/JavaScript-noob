@@ -33,9 +33,9 @@ function validateEmail(input, noValue, invalidValue){
     return true;
 }
 let form = document.querySelector('form');
-let name_requered = 'enter Your Name!'
+let name_requered = 'enter your Name!'
 let email_requered = 'enter your Email!'
-let email_NotValid = "enter Your correct Email!" 
+let email_NotValid = "enter your correct Email!" 
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
