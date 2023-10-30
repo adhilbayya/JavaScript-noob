@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MutationObserver Demo: ChildList</title>
+</head>
+<body>
+    <ul id="language">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>TypeScript</li>
+    </ul>
+
+    <button id="btnStart">Start Observing</button>
+    <button id="btnStop">Stop Observing</button>
+    <button id="btnAdd">Add</button>
+    <button id="btnRemove">Remove the Last Child</button>
+
+    <script>
+        (function(){
+            let list = document.querySelector('#language')
+            let btnAdd = document.querySelector('#btnAdd')
+            let btnRemove = document.getElementById('btnRemove')
+            let btnStart = document.getElementById('btnStart')
+            let btnStop = document.getElementById('btnStop')
+            
+            btnStop.disabled = true;
+
+            function log(mutations){
+                for(let mutation of mutations){
+                    if(mutation.type == "childList"){
+                        console.log(mutation)
+                    }
+                }
+            }
+
+            let observer = new MutationObserver(log)
+
+            btnStart.addEventListener('click',() =>{
+                observer.observe(list,{
+                    childList : true
+                })
+                btnStart.disabled = true
+                btnStop.disabled = false
+            })
+            btnStop.addEventListener('click',() =>{
+                observer.disconnect()
+                btnStart.disabled = false
+                btnStop.disabled = true
+            })
+
+            let count = 1;
+            btnAdd.addEventListener('click',() =>{
+                let li = document.createElement("li")
+                li.textContent = `Item ${count++}`
+
+                list.appendChild(li)
+            })
+
+            btnRemove.addEventListener('click',() =>{
+                list.lastElementChild? list.removeChild(list.lastElementChild) : console.log('There is no element to remove')
+            })
+
+        })();
+    </script>
+</body>
+</html>
