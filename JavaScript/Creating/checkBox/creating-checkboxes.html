@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div"></div>
+    <script>
+        const colors = ['red','blue','green'];
+        colors.forEach((color) => {
+            let id = `color-${color}`;
+            let label = document.createElement("label");
+            label.setAttribute('for', id);
+
+            let input = document.createElement("input");
+            input.id = id;
+            input.type = 'checkbox';
+            input.value = color
+            input.name = 'color'
+
+            label.appendChild(input)
+            label.appendChild(document.createTextNode(color))
+            let div = document.querySelector('#div')
+            div.appendChild(label)
+        })
+    </script>
+</body>
+</html>
