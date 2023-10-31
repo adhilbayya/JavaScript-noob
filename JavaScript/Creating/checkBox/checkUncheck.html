@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="c1">
+        <input type="checkbox" id="c1" value="Red" name="color">Red
+    </label>
+    <label for="c2">
+        <input type="checkbox" id="c2" value="Blue" name="color">Blue
+    </label>
+    <label for="c3">
+        <input type="checkbox" id="c3" value="Green" name="color">Green
+    </label>
+    <button id="btn">check/uncheck</button>
+    <script>
+        function check(checked = true){
+            let checkBoxes = document.querySelectorAll('input[name = "color"]');
+            checkBoxes.forEach((checkbox) => {
+                checkbox.checked = checked;
+            })
+        }
+
+        function checkAll(){
+            check();
+            this.onclick = uncheckAll
+        }
+        function uncheckAll(){
+            check(false);
+            this.onclick = checkAll;
+        }
+        let btn = document.querySelector('#btn');
+        btn.onclick = checkAll;
+    </script>
+</body>
+</html>
