@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <label for="framework">Enter The framework:</label>
+            <input type="text" id="framework" placeholder="enter the framework">
+            <button class="btnAdd">Add</button>
+
+            <label for="list">The list are:</label>
+            <select name="list" id="list">
+
+            </select>
+            <button class="btnRemove">Remove</button>
+        </form>
+    </div>
+    <script>
+        let btnAdd = document.querySelector(".btnAdd")
+        let btnRemove = document.querySelector('.btnRemove')
+        let list = document.querySelector('#list')
+        let framework = document.querySelector('#framework')
+
+        btnAdd.onclick = (event) =>{
+            event.preventDefault();
+
+            if(framework == ""){
+                alert('Enter any frameworks')
+                return;
+            }
+            let option = new Option(framework.value)
+            list.add(option, undefined)
+            framework.value = '';
+            framework.focus();
+        }
+
+        btnRemove.onclick = (e) =>{
+            e.preventDefault();
+            let elements = []
+
+            for(let i = 0; i < list.options.length; i++){
+                elements[i] = list.options[i].selected;
+            }
+
+            let index = list.options.length;
+            while(index--){
+                if(elements[index]){
+                    list.remove(index);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
