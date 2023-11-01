@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="body">
+
+    </div>
+    <p class="output"></p>
+    <script>
+        let sizes = ['XL','L','M','S','XS']
+        let body = document.querySelector('.body')
+        body.innerHTML = sizes.map((size) =>`<div>
+            <input type = "radio" name = "size" id = "${size}" value = "${size}">
+            <label for = "${size}">${size}</label>
+            </div>`
+            
+        ).join(' ');
+        let size = document.querySelectorAll('input[name = "size"]')
+        for(let radio of size){
+            radio.addEventListener('change', showSize)
+        }
+
+        function showSize(e){
+            console.log(e);
+            if(this.checked){
+                document.querySelector('.output').textContent = `you selected ${this.value}`
+            }
+        }
+    </script>
+</body>
+</html>
