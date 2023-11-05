@@ -5,10 +5,6 @@ let confPass = document.querySelector('#confPass')
 
 let form = document.querySelector('#signup')
 
-form.addEventListener('click', (e) => {
-    e.preventDefault();
-})
-
 let isRequered = (value) => {
     return value == "" ? false : true;
 }
