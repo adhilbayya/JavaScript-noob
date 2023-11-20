@@ -10,5 +10,5 @@ All the projects are simple and easy to do.<br>
 6.Stone paper scissor game using user input <br>
 7.Stone paper scissor using funtions. <br>
 8.Simple JSON in javascript. <br>
-and many more
+
 
